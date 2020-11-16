@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-ad-client="ca-pub-6351481944770696" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <title>MOVIE BOOKING</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="login.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0e070a32e4.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+  <section>
+    <header>
+      <a href="/index" class="logo">VIT movies <i class="fas fa-ticket-alt"></i></a>
+    </header>
+    <div class="feedback">
+      <form action="/feedback" method="POST">
+        <table style="margin-left: auto;margin-right: auto;width: 280px;">
+          <tr>
+            <td>
+              <h1 style="color:white;">Feedback:</h1>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3 style="color:white;">Name</h3>
+            </td>
+            <td>
+              <input type="text" name="name" ng-model="name" placeholder="name" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3 style="color:white;">Email</h3>
+            </td>
+            <td>
+              <input type="email" name="username" ng-model="username" placeholder="email" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3 style="color:white;">Complain:</h3>
+            </td>
+            <td>
+              <textarea name="complain" ng-model="complain" rows="7" cols="60"
+                placeholder="Please Enter Your Complain"></textarea>
+            </td>
+          </tr>
+        </table>
+        <br>
+        <button type="submit" class="feedback">submit<i class="fas fa-couch"></i></button>
+      </form>
+    </div>
+
+
+    <ul class="sci">
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </section>
+</body>
+
+</html>

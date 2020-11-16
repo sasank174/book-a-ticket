@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-ad-client="ca-pub-6351481944770696" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <title>MOVIE BOOKING</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="pr2.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/0e070a32e4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <script>
+    function pass1() {
+      var name = "Doctor Strange";
+      localStorage.setItem("name4", name);
+      return false;
+    }
+
+    function pass2() {
+      var name = "Spider Man";
+      localStorage.setItem("name4", name);
+      return false;
+    }
+
+    function pass3() {
+      var name = "Iron Man";
+      localStorage.setItem("name4", name);
+      return false;
+    }
+  </script>
+  <section>
+    <header>
+      <a href="/index" class="logo">VIT Movies <i class="fas fa-ticket-alt"></i></a>
+      <div class="togglemenu" onclick="togglemenu()"></div>
+      <ul class="navigation">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/feedback">FeedBack</a></li>
+        <li><a href="/logout">Sign Out</a></li>
+      </ul>
+    </header>
+
+
+    <form action="/pr2" method="POST">
+      <div class="container">
+        <div class="clip clip1" onmouseover="PlaySound('mySound1')" onmouseout="StopSound('mySound1')">
+          <div class="content">
+            <h2>DOCTOR STRANGE</h2>
+            <p>Doctor Strange is a 2016 American superhero film based on the Marvel Comics character of the
+              same
+              name. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it
+              is
+              the 14th film in the Marvel Cinematic Universe (MCU).</p>
+            <button type="submit" value="DOCTOR STRANGE" name="sasank">
+              <a onclick="pass1();" name="mname" value="Doctor Strange">Book now <i class="fas fa-cookie-bite"></i></a>
+            </button>
+          </div>
+        </div>
+    </form>
+
+    <form action="/pr2" method="POST">
+      <div class="clip clip2" onmouseover="PlaySound('mySound2')" onmouseout="StopSound('mySound2')">
+        <div class="content">
+          <h2>SPIDER MAN</h2>
+          <p>Spider-Man: Homecoming is a 2017 American superhero film based on the Marvel Comics character
+            Spider-Man, co-produced by Columbia Pictures and Marvel Studios, and distributed by Sony
+            Pictures Releasing. It is the second Spider-Man film reboot and the 16th film in the Marvel
+            Cinematic Universe (MCU).</p>
+          <button type="submit" value="SPIDER MAN" name="sasank">
+            <a onclick="pass2();" name="mname" value="Spider Man">Book now <i class="fas fa-cookie-bite"></i></a>
+          </button>
+
+        </div>
+      </div>
+    </form>
+
+    <form action="/pr2" method="POST">
+      <div class="clip clip3" onmouseover="PlaySound('mySound3')" onmouseout="StopSound('mySound3')">
+        <div class="content">
+          <h2>IRON MAN</h2>
+          <p>Iron Man is a 2008 American superhero film based on the Marvel Comics character of the same name.
+            Produced by Marvel Studios and distributed by Paramount Pictures, it is the first film in the
+            Marvel Cinematic Universe.</p>
+          <button type="submit" value="IRON MAN" name="sasank">
+            <a onclick="pass3();" name="mname" value="Iron Man">Book now <i class="fas fa-cookie-bite"></i></a>
+          </button>
+
+        </div>
+      </div>
+      </div>
+    </form>
+    <audio id='mySound1' src='song1.mp3'></audio>
+    <audio id='mySound2' src='song2.mp3'></audio>
+    <audio id='mySound3' src='song4.mp3'></audio>
+    <ul class="sci">
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+
+
+  </section>
+  <script>
+    function PlaySound(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.play();
+    }
+
+    function StopSound(soundobj) {
+      var thissound = document.getElementById(soundobj);
+      thissound.pause();
+      thissound.currentTime = 0;
+    }
+  </script>
+  <script>
+    function togglemenu() {
+      const togglemenu = document.querySelector('.togglemenu');
+      const navigation = document.querySelector('.navigation');
+      togglemenu.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>

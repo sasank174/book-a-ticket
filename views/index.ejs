@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-ad-client="ca-pub-6351481944770696" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <title>MOVIE BOOKING</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="pr1.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/0e070a32e4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section>
+    <header>
+      <a href="#" class="logo">VIT Movies <i class="fas fa-ticket-alt"></i></a>
+      <div class="togglemenu" onclick="togglemenu()"></div>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/feedback">FeedBack</a></li>
+        <li><a href="/logout">Sign Out</a></li>
+
+      </ul>
+    </header>
+    <div class="content">
+      <div class="contentBx">
+        <h2>CURVE METRICS</h2>
+        <p>Book ur Movie is a website was created on august 2020 by Sasank, Karthik and Vinay. This theater
+          consists of 3 screens and currently marvel movies are playing in these theaters. In screen 1 Doctor
+          Strange is playing. In screen 2 Spider Man is playing and in screen 3 Iron Man. Please wear masks
+          while entering the theater. Maintain 10 feet distance between the audience. Enjoy your movie...</p>
+
+        <form action="/index" method="POST">
+          <button type="submit"><a>Book tickets <i class="fas fa-compact-disc"></i></a></button>
+        </form>
+
+      </div>
+      <ul class="sci">
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <script>
+    function togglemenu() {
+      const togglemenu = document.querySelector('.togglemenu');
+      const navigation = document.querySelector('.navigation');
+      togglemenu.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>

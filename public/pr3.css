@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("main.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  position: relative;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  background-color: rgb(36, 32, 32);
+  border-radius: 20px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+header .navigation.active {
+  display: flex;
+}
+
+header .navigation li {
+  list-style: none;
+}
+
+header .navigation li a {
+  display: inline-block;
+  color: black;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+header .navigation li a:hover {
+  color: rgb(6, 166, 230);
+}
+
+td {
+  padding: 3px;
+  font-size: 25px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 500px;
+  max-height: 600px;
+  background-image: url("m.jpg");
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+}
+
+.content .contentBx h2 {
+  font-size: 4em;  
+  color: white;
+  text-align: left;
+  line-height: 1em;
+  font-family: sans-serif;
+}
+
+
+.content .contentBx {
+  padding: 10px 30px 10px 30px;
+  font-size: 1em;
+  color: white;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.content .contentBx button {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: rgb(6, 143, 235);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 1px 40px 1px 40px;
+  border-style: none;
+  border-spacing: 10px;
+}
+
+.sci {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.sci li a {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+}
+
+.sci li a i {
+  font-size: 50px;
+  color: red;
+}
+
+.sci li :hover {
+  color: rgb(0, 0, 0);
+}
+
+input.ng-invalid {
+  border-width: 1px;
+  border-color: #f1260b;
+  box-shadow: 0 0 50px #f11717;
+}
+
+input.ng-valid {
+  border-width: 1px;
+  border-color: #50dcf5;
+  box-shadow: 0 0 50px #3bc0f5;
+}
+
+@media (max-width:850px) {
+  header {
+    padding: 15px 40px;
+  }
+
+  section {
+    padding: 40px;
+    background-image: url("m.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .content .contentBx h2 {
+    font-size: 2.5em;
+  }
+
+  .content .contentBx p {
+    font-size: 1em;
+  }
+
+  header .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  header .navigation li a {
+    font-size: 24px;
+    margin: 10px 0;
+    color: white;
+  }
+
+  .togglemenu {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image: url("menu.jpg");
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    cursor: pointer;
+    z-index: 11;
+  }
+
+  .togglemenu.active {
+    background-image: url("close.jpg");
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-ad-client="ca-pub-6351481944770696" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <title>MOVIE BOOKING</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="pr3.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0e070a32e4.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+  <section>
+    <header>
+      <a href="/index" class="logo">VIT Movies <i class="fas fa-ticket-alt"></i></a>
+      <div class="togglemenu" onclick="togglemenu()"></div>
+      <ul class="navigation">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/feedback">FeedBack</a></li>
+        <li><a href="/logout">Sign Out</a></li>
+      </ul>
+    </header>
+    <div class="content" id="content1">
+      <div class="contentBx" ng-app="">
+
+        <form name="myForm" action="/pr3" method="POST">
+
+          <h2 name="x">MOVIE: <span id="moviename" style="font-size: 20px;font-family: 'Nosifer', cursive;"></span></h2>
+          <table style="margin-left: auto;margin-right: auto;">
+            <tr>
+              <td>
+                Name
+              </td>
+              <td>
+                <input type="text" name="myName1" ng-model="myName1" maxlength="35" placeholder="name" required>
+              </td>
+            <tr>
+              <td>
+                Phone
+              </td>
+              <td>
+                <input type="text" name="myName2" ng-model="myName2" pattern="[789][0-9]{9}" placeholder="Phone Number"
+                  required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                No. of Tickets
+              </td>
+              <td>
+                <input type="number" name="myName3" ng-model="myName3" pattern="[1-9]{1}" placeholder="no of tickets"
+                  required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Date
+              </td>
+              <td>
+                <input type="date" name="myName4" ng-model="myName4" placeholder="date" required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Time
+              </td>
+              <td>
+                <select size="1" required>
+                  <option> 9:00 AM - 12:00PM </option>
+                  <option> 1:PM - 4:00PM </option>
+                  <option> 5:00PM - 8:00PM </option>
+                  <option> 9:00PM -12:00AM </option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          <br>
+          <button type="submit" id="finputs">Book Now <i class="fas fa-couch"></i></button>
+        </form>
+      </div>
+    </div>
+    <ul class="sci">
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </section>
+  <script>
+    function togglemenu() {
+      const togglemenu = document.querySelector('.togglemenu');
+      const navigation = document.querySelector('.navigation');
+      togglemenu.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+  </script>
+  <script>
+    document.getElementById("moviename").innerHTML = localStorage.getItem("name4");
+
+    var x = localStorage.getItem("name4");
+    if (x == "Spider Man") {
+      document.getElementById("moviename").style.color = "black";
+      document.getElementById("content1").style.backgroundImage = "url('spiderman2.jpg')";
+      document.getElementById("content1").style.backgroundSize = "cover";
+    } else if (x == "Iron Man") {
+      document.getElementById("moviename").style.color = "rgb(0, 217, 255)";
+      document.getElementById("content1").style.backgroundImage = "url('ironman3.jpg')";
+      document.getElementById("content1").style.backgroundSize = "cover";
+    } else {
+      document.getElementById("moviename").style.color = "rgb(250, 207, 18)";
+      document.getElementById("content1").style.backgroundImage = "url('doctorstrange2.jpg')";
+      document.getElementById("content1").style.backgroundSize = "cover";
+      document.getElementById("moviename").style.fontSize = "15px";
+    }
+  </script>
+</body>
+
+</html>

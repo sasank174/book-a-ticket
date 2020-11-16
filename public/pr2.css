@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  min-height: 100vh;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("main.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  position: relative;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  background-color: rgb(36, 32, 32);
+  border-radius: 20px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+header .navigation.active {
+  display: flex;
+}
+
+header .navigation li {
+  list-style: none;
+}
+
+header .navigation li a {
+  display: inline-block;
+  color: black;
+  margin-right: 40px;
+  text-decoration: none;
+}
+
+header .navigation li a:hover {
+  color: rgb(6, 166, 230);
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background-color: rgb(54, 49, 49);
+}
+
+.container .clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+.container .clip.clip1 {
+  background-image: url("doctorstrange.jpg");
+  background-size: cover;
+  clip-path: polygon(0 0, 41% 0, 8% 100%, 0% 100%);
+}
+
+.container .clip.clip2 {
+  background-image: url("spiderman.jpg");
+  background-size: cover;
+  clip-path: polygon(41% 0, 83% 0, 55% 100%, 8% 100%);
+}
+
+.container .clip.clip3 {
+  background-image: url("ironman.jpg");
+  background-size: cover;
+  clip-path: polygon(83% 0, 100% 0, 100% 100%, 55% 100%);
+}
+
+.container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.container .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.container .clip .content {
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 70%;
+  padding: 20px;
+  background-color: white;
+  opacity: 0;
+  transition: 1s;
+}
+
+.container .clip .content a {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: rgb(6, 143, 235);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 10px 40px 40px 10px;
+}
+
+.container .clip:hover .content {
+  bottom: 0;
+  opacity: 1;
+}
+
+.sci {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.sci li a {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+}
+
+.sci li a i {
+  font-size: 50px;
+  color: red;
+}
+
+.sci li :hover {
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width:850px) {
+  header {
+    padding: 15px 40px;
+  }
+
+  section {
+    padding: 40px;
+    background-image: url("m.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  header .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  header .navigation li a {
+    font-size: 24px;
+    margin: 10px 0;
+    color: white;
+  }
+
+  .container .clip .content p {
+    display: none;
+  }
+
+  .togglemenu {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image: url("menu.jpg");
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    cursor: pointer;
+    z-index: 11;
+  }
+
+  .togglemenu.active {
+    background-image: url("close.jpg");
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
