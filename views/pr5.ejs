@@ -11,7 +11,17 @@
   <script src="https://kit.fontawesome.com/0e070a32e4.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="myFunction()">
+  <div class="loader" id="campaign-alert">
+    <img src="loader.png" alt="loader">
+  </div>
+
+  <script>
+    function myFunction() {
+      document.getElementById('campaign-alert').style.display = "none";
+    }
+  </script>
+  
   <section>
     <header>
       <a href="/index" class="logo">VIT Movies <i class="fas fa-ticket-alt"></i></a>

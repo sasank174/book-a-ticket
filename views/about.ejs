@@ -12,6 +12,32 @@
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <style>
+    .loader {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      background-color: white;
+      z-index: 1000;
+    }
+
+    .loader img {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: loads 5s linear infinite;
+    }
+
+    @keyframes loads {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
     body {
       background: black;
     }
@@ -179,7 +205,17 @@
 
 </head>
 
-<body>
+<body onload="myFunction()">
+  <div class="loader" id="campaign-alert">
+    <img src="loader.png" alt="loader">
+  </div>
+
+  <script>
+    function myFunction() {
+      document.getElementById('campaign-alert').style.display = "none";
+    }
+  </script>
+
   <section>
 
     <br><br><br><br>
@@ -253,6 +289,12 @@
       </div>
     </div>
   </section>
+
+  <script>
+    function myFunction() {
+      document.getElementById('campaign-alert').style.display = "none";
+    }
+  </script>
 </body>
 
 </html>
