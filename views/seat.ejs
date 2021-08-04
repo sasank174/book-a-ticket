@@ -251,12 +251,19 @@
       </center>
     </div>
     <script>
-      function onLoaderFunc() {
-        $(".seatStructure *").prop("disabled", true);
-        // $(".displayerBoxes *").prop("disabled", true);
-        var $val = $('#nos').html();
-        $('#Numseats').val($val);
-      }
+      $(function () {
+				$('#Numseats').val($('#nos').text());
+			});
+
+			function onLoaderFunc() {
+				$(".seatStructure *").prop("disabled", true);
+				$(".displayerBoxes *").prop("disabled", true);
+				// var $val = $('#nos').html();
+				// $('#Numseats').text("ndjds");
+				// $('#Numseats').text($val);
+				// $('#Numseats').val($('#nos').text());
+
+			}
 
       function takeData() {
         if ($("#Numseats").val().length == 0) {
@@ -291,10 +298,6 @@
         } else {
           alert("Please select " + $("#Numseats").val() + " seats");
         }
-      }
-
-      function myFunction() {
-        alert($("input:checked").length);
       }
 
       $(":checkbox").click(function () {
